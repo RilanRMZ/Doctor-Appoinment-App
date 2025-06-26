@@ -1,4 +1,3 @@
-import React from "react";
 import { assets } from "../assets/assets_frontend/assets";
 
 const Contact = () => {
@@ -25,7 +24,7 @@ const Contact = () => {
           <p className="text-gray-500">
             Tel: (+971) 52460 4509 <br /> Email: rilan.rmz@gmail.com
           </p>
-          <p className="font-semibold text-lg text-gray-600">
+          {/* <p className="font-semibold text-lg text-gray-600">
             Careers at PRESCRIPTO
           </p>
           <p className="text-gray-500">
@@ -34,7 +33,7 @@ const Contact = () => {
 
           <button className="border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500">
             Explore Jobs
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
