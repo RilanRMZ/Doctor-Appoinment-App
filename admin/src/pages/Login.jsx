@@ -16,7 +16,7 @@ const Login = () => {
     try {
       if (state === "Admin") {
         const { data } = await axios.post(
-          "https://doctor-appoinment-app-admin.vercel.app/api/admin/login",
+          "https://doctor-appoinment-server-ashen.vercel.app/api/admin/login",
           { email, password }
         );
         if (data.success) {

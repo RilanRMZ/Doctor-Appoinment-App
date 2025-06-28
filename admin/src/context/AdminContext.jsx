@@ -18,7 +18,7 @@ const AdminContextProvider = (props) => {
   const getAllDoctors = async () => {
     try {
       const { data } = await axios.get(
-        "https://doctor-appoinment-app-admin.vercel.app/api/admin/all-doctors",
+        "https://doctor-appoinment-server-ashen.vercel.app/api/admin/all-doctors",
         { headers: { aToken } }
       );
       if (data.success) {
@@ -35,7 +35,7 @@ const AdminContextProvider = (props) => {
   const changeAvailability = async (docId) => {
     try {
       const { data } = await axios.post(
-        "https://doctor-appoinment-app-admin.vercel.app/api/admin/change-availability",
+        "https://doctor-appoinment-server-ashen.vercel.app/api/admin/change-availability",
         { docId },
         { headers: { aToken } }
       );
@@ -53,7 +53,7 @@ const AdminContextProvider = (props) => {
   const getAllAppointments = async () => {
     try {
       const { data } = await axios.get(
-        "https://doctor-appoinment-app-admin.vercel.app/api/admin/appointments",
+        "https://doctor-appoinment-server-ashen.vercel.app/api/admin/appointments",
         { headers: { aToken } }
       );
 
@@ -71,7 +71,7 @@ const AdminContextProvider = (props) => {
   const cancelAppointment = async (appointmentId) => {
     try {
       const { data } = await axios.post(
-        "https://doctor-appoinment-app-admin.vercel.app/api/admin/cancel-appointment",
+        "https://doctor-appoinment-server-ashen.vercel.app/api/admin/cancel-appointment",
         { appointmentId },
         { headers: { aToken } }
       );
@@ -90,7 +90,7 @@ const AdminContextProvider = (props) => {
   const getDashData = async () => {
     try {
       const { data } = await axios.get(
-        "https://doctor-appoinment-app-admin.vercel.app/api/admin/dashboard",
+        "https://doctor-appoinment-server-ashen.vercel.app/api/admin/dashboard",
         { headers: { aToken } }
       );
 
