@@ -17,7 +17,7 @@ const AdminContextProvider = (props) => {
 
   const getAllDoctors = async () => {
     try {
-      const { data } = await axios.post(
+      const { data } = await axios.get(
         "https://doctor-appoinment-app-admin.vercel.app/api/admin/all-doctors",
         { headers: { aToken } }
       );
