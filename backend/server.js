@@ -21,8 +21,6 @@ app.use(cors());
 app.use(
   cors({
     origin: "https://doctor-appoinment-app-zeta.vercel.app",
-    methods: "GET,POST,PUT,DELETE",
-    credentials: true,
   })
 );
 
