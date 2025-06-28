@@ -17,7 +17,10 @@ connectCloudinary();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://doctor-appoinment-app-zeta.vercel.app",
+    origin: [
+      "https://doctor-appoinment-app-zeta.vercel.app",
+      "https://doctor-appoinment-app-admin.vercel.app",
+    ],
   })
 );
 
