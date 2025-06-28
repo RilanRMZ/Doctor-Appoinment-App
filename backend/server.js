@@ -1,30 +1,38 @@
-import express from 'express'
-import cors from 'cors'
-import 'dotenv/config'
-import connectDB from './config/mongodb.js'
-import connectCloudinary from './config/cloudinary.js'
-import adminRouter from './routes/adminRoute.js'
-import doctorRouter from './routes/doctorRoute.js'
-import userRouter from './routes/userRoute.js'
+import express from "express";
+import cors from "cors";
+import "dotenv/config";
+import connectDB from "./config/mongodb.js";
+import connectCloudinary from "./config/cloudinary.js";
+import adminRouter from "./routes/adminRoute.js";
+import doctorRouter from "./routes/doctorRoute.js";
+import userRouter from "./routes/userRoute.js";
+import cors from "cors";
 
 // app config
-const app = express()
-const port = process.env.PORT || 4000
-connectDB()
-connectCloudinary()
+const app = express();
+const port = process.env.PORT || 4000;
+connectDB();
+connectCloudinary();
 
 // middlewares
-app.use(express.json())
-app.use(cors())
+app.use(express.json());
+app.use(cors());
+
+app.use(
+  cors({
+    origin: "https://doctor-appoinment-app-zeta.vercel.app",
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true,
+  })
+);
 
 // api end point
-app.use('/api/admin', adminRouter)
-app.use('/api/doctor', doctorRouter)
-app.use('/api/user', userRouter)
+app.use("/api/admin", adminRouter);
+app.use("/api/doctor", doctorRouter);
+app.use("/api/user", userRouter);
 
+app.get("/", (req, res) => {
+  res.send("Api working...");
+});
 
-app.get('/', (req, res) => {
-  res.send('Api working...')
-})
-
-app.listen(port, () => console.log('Server started', port)) 
+app.listen(port, () => console.log("Server started", port));
