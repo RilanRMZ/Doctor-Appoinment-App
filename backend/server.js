@@ -21,6 +21,7 @@ app.use(
       "https://doctor-appoinment-app-zeta.vercel.app",
       "https://doctor-appoinment-app-admin.vercel.app",
     ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 
