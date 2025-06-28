@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: "https://doctor-appoinment-app-zeta.vercel.app/",
-    //credentials: true, // Allow cookies to be sent with requests
+    credentials: true, // Allow cookies to be sent with requests
   })
 );
 
