@@ -32,7 +32,6 @@ const AppContextProvider = (props) => {
   const loadUserProfileData = async () => {
     try {
       const { data } = await axios.get(backendUrl + "/api/user/get-profile", {
-        withCredentials: true,
         headers: { token },
       });
 
