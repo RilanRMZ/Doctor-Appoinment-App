@@ -6,7 +6,6 @@ import connectCloudinary from "./config/cloudinary.js";
 import adminRouter from "./routes/adminRoute.js";
 import doctorRouter from "./routes/doctorRoute.js";
 import userRouter from "./routes/userRoute.js";
-import cors from "cors";
 
 // app config
 const app = express();
@@ -19,8 +18,6 @@ app.use(express.json());
 app.use(
   cors({
     origin: ["https://doctor-appoinment-app-zeta.vercel.app/"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
   })
 );
 
